@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dione Rewards</title>
+    <link rel="stylesheet" href="styles/dione.css">
+    <link rel="stylesheet" href="styles/forms.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Dione Rewards">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+</head>
+<body>
+    <div class="session row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <img src="images/session.png" class="img-responsive sessionLogo" alt="">
+            <form name="frmSession" id="frmSession">
+                <div class="form-group">
+                    <label for="txtEmail">Email</label>
+                    <input type="email" class="form-control" name="txtEmail" id="txtEmail" placeholder="Dirección de correo electrónico">
+                </div>
+                <div class="form-group">
+                    <label for="txtPassword">Contraseña</label>
+                    <input type="password" class="form-control" name="txtPassword" id="txtPassword" placeholder="Ingresa tu contraseña">
+                </div>
+                <p class="text-center ptop2"><button type="submit" id="submitLogin" class="btn btn-black">Iniciar sesión</button></p>
+                <p class="text-center"><a href="register.html">REGISTRATE</a></p>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/login.js"></script>
+</body>
+</html>

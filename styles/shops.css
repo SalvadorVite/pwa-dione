@@ -28,8 +28,16 @@
 }
 
 .header #butHomeShop {
-    background: url('../images/svg/home.svg') center center no-repeat; 
+    background: url('../images/svg/iconfinder_back_172570.svg') center center no-repeat;
 }
+
+.header #butListShops {
+    background: url('../images/svg/home.svg') center center no-repeat;
+}
+
+/*.dialog-buttons #butShowAll {
+    background: url('../images/svg/iconfinder_Tilda_Icons_1ed_location_3586361.svg') center center no-repeat;
+}*/
 
 /*.card-shop {
     padding: 16px;

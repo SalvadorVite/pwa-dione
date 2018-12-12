@@ -1,0 +1,65 @@
+.dialog-container {
+    background: rgba(0, 0, 0, 0.57);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    will-change: opacity;
+    -webkit-transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
+    transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
+}
+  
+.dialog-container--visible {
+    opacity: 1;
+    pointer-events: auto; 
+}
+  
+.dialog {
+    background: #FFF;
+    border-radius: 2px;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.24), 0 14px 28px rgba(0, 0, 0, 0.48);
+    min-width: 280px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) translateY(30px);
+            transform: translate(-50%, -50%) translateY(30px);
+    -webkit-transition: -webkit-transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
+    transition: -webkit-transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
+    transition: transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
+    transition: transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s, -webkit-transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s; 
+}
+  
+.dialog > div {
+    padding-left: 24px;
+    padding-right: 24px; 
+}
+  
+.dialog-title {
+    padding-top: 20px;
+    font-size: 1.25em; 
+    font-weight: bold;
+}
+  
+.dialog-body {
+    padding-top: 20px;
+    padding-bottom: 24px; 
+}
+
+.dialog-body select {
+    width: 100%;
+    font-size: 2em; 
+}
+
+.dialog-buttons {
+    padding: 8px !important;
+    float: right;
+}
+
+.list-shop {
+    border-bottom: 1px solid;
+    margin-bottom: 5px;
+}

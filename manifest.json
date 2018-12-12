@@ -28,9 +28,9 @@
             "type": "image/png"
         }
     ],
-    "start_url": "/index.html",
+    "start_url": "/welcome.html",
     "display": "standalone",
     "orientation": "portrait",
     "background_color": "#fff",
-    "theme_color": "#000"
+    "theme_color": "#3F51B5"
 }

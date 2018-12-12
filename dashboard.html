@@ -7,6 +7,7 @@
     <title>Dione Rewards</title>
     <link rel="stylesheet" href="styles/dione.css">
     <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/dialog.css">
     <link rel="stylesheet" href="styles/detail-notif.css">
     <link rel="stylesheet" href="styles/list-notif.css">
     <link rel="stylesheet" href="styles/shops.css">
@@ -20,7 +21,7 @@
     <meta name="msapplication-TileColor" content="#2F3BA2">
 </head>
 <body>
-    <main id="dash-panel" class="container-promotions" style="display: none;">
+    <main id="dash-panel" class="container-promotions">
         <div class="wrap">
             <div id="arrow-left" class="arrow"></div>
             <div id="slider">
@@ -103,17 +104,30 @@
             </div>
         </main>
     </div>
-    <div id="dash-shops">
+    <div id="dash-shops" style="display: none;">
         <header class="header header-shop">
             <button id="butHomeShop" class="headerButton float-left" aria-label=""></button>
+            <button id="butListShops" class="headerButton float-right" aria-label=""></button>
         </header>
         <main class="main-shop" id="map">
         </main>
+        <div class="dialog-container">
+            <div class="dialog">
+                <div class="dialog-title">TIENDAS DIONE</div>
+                <div class="dialog-body">
+                    <div class="list-shop cardShop" hidden></div>
+                </div>
+                <div class="dialog-buttons">
+                    <button id="butShowAll" class="button">Ver todos</button>
+                    <button id="butAddCancel" class="button">Cancelar</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="scripts/app.js"></script>
     <script src="scripts/dash.js"></script>
     <script src="scripts/list-notif.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXLhcSlMm4GJzLpQtJ9AAbi8R-v08Tgug" asyn defer></script>
     <script src="scripts/shops.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXLhcSlMm4GJzLpQtJ9AAbi8R-v08Tgug&callback=initMap" async defer></script>
 </body>
 </html>

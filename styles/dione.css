@@ -88,10 +88,6 @@ body {
     z-index: 1000; 
 }
 
-.head-trans {
-    background: #e8dada85 !important;
-}
-
 .header__title {
     font-weight: 400;
     font-size: 20px;
@@ -116,17 +112,8 @@ body {
     cursor: pointer; 
 }
 
-.header #butBack {
-    background: url('../images/svg/iconfinder_back_172570.svg') center center no-repeat;
-}
-
-.header #butListPromotions {
-    background: url('../images/svg/notifications-list.svg') center center no-repeat; 
-}
-
 .container-promotions {
     position: relative;
-    /*background: url("https://dione.blueboy.studio/images_promociones/portada_2.jpg") center center no-repeat;*/
     -webkit-box-flex: 1;
     -webkit-flex: 1;
         -ms-flex: 1;
@@ -310,18 +297,4 @@ img.nots {
 
 .container {
     padding-left: 0 !important;
-}
-
-/*Styles for detail promotion*/
-.card-info-promo {
-    position: absolute;
-    height: 8rem;
-    width: 100%;
-    bottom: 8rem;
-}
-
-.card-info-detail {
-    position: absolute;
-    background: #ffffffb0;
-    height: 100%;
 }

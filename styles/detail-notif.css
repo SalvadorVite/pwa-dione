@@ -1,0 +1,25 @@
+/*Styles for DetailNotifications*/
+.card-info-promo {
+    position: absolute;
+    height: 8rem;
+    width: 100%;
+    bottom: 8rem;
+}
+
+.card-info-detail {
+    position: absolute;
+    background: #ffffffb0;
+    height: 100%;
+}
+
+.head-trans {
+    background: #e8dada85 !important;
+}
+
+.header #butBack {
+    background: url('../images/svg/iconfinder_back_172570.svg') center center no-repeat;
+}
+
+.header #butListPromotions {
+    background: url('../images/svg/notifications-list.svg') center center no-repeat; 
+}

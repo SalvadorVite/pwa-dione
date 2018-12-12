@@ -11,16 +11,8 @@
     };
 
     //Event listeners for UI elements
-    document.getElementById('butNotifications').addEventListener('click', function() {
-        alert("Ir a butNotifications");
-    });
-
     document.getElementById('butProfile').addEventListener('click', function() {
         alert("Ir a butProfile");
-    });
-
-    document.getElementById('butShops').addEventListener('click', function() {
-        alert("Ir a butShops");
     });
 
     document.getElementById('butRecords').addEventListener('click', function() {
@@ -91,6 +83,9 @@
                 if (response) {
                     response.json().then(function updateFromCache(json) {
                         var data = json;
+                        if (data) {
+                            dash.updateLastPromotion(data);
+                        }
                         dash.updateLastPromotion(data);
                     });
                 }
@@ -102,7 +97,9 @@
             if (request.readyState === XMLHttpRequest.DONE) {
                 if (request.status === 200) {
                     var response = JSON.parse(request.response);
-                    dash.updateLastPromotion(response);
+                    if (response) {
+                        dash.updateLastPromotion(response);
+                    }
                 }
             } else {
                 //Return fake data (banner, text)
@@ -256,15 +253,9 @@
     };
 
     //Event listeners for UI elements ViewDetail
-    document.getElementById('butListPromotions').addEventListener('click', function() {
-        alert("Ir a lista butNotifications");
-    });
-
     document.getElementById('butBack').addEventListener('click', function() {
         dash.dashPanel.style.display = 'block';
         dash.dashDetailPromo.style.display = 'none';
-        //dash.dashPanel.removeAttribute('hidden');
-        //dash.dashDetailPromo.setAttribute('hidden', "");
     });
 
 

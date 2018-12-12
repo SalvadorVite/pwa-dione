@@ -7,6 +7,9 @@
     <title>Dione Rewards</title>
     <link rel="stylesheet" href="styles/dione.css">
     <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/detail-notif.css">
+    <link rel="stylesheet" href="styles/list-notif.css">
+    <link rel="stylesheet" href="styles/shops.css">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="manifest" href="/manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,7 +20,7 @@
     <meta name="msapplication-TileColor" content="#2F3BA2">
 </head>
 <body>
-    <main class="container-promotions" id="dash-panel">
+    <main id="dash-panel" class="container-promotions" style="display: none;">
         <div class="wrap">
             <div id="arrow-left" class="arrow"></div>
             <div id="slider">
@@ -82,7 +85,35 @@
             </div>
         </main>
     </div>
+    <div id="dash-list-promos" style="display: none;">
+        <header class="header header-list">
+            <button id="butHomeList" class="headerButton float-left" aria-label=""></button>
+        </header>
+        <main class="main-list">
+            <div class="card-list-notif card-notif-template" hidden>
+                <img src="" class="img-responsive">
+                <div class="details-notif hide-notif">
+                    <div class="title-notification">
+                        Descuentos fin de año
+                    </div>
+                    <div class="text-notification">
+                        Descuentos de fin de año incia diciembre 31
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="dash-shops">
+        <header class="header header-shop">
+            <button id="butHomeShop" class="headerButton float-left" aria-label=""></button>
+        </header>
+        <main class="main-shop" id="map">
+        </main>
+    </div>
     <script src="scripts/app.js"></script>
     <script src="scripts/dash.js"></script>
+    <script src="scripts/list-notif.js"></script>
+    <script src="scripts/shops.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXLhcSlMm4GJzLpQtJ9AAbi8R-v08Tgug&callback=initMap" async defer></script>
 </body>
 </html>

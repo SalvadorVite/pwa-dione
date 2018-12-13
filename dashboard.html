@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/detail-notif.css">
     <link rel="stylesheet" href="styles/list-notif.css">
     <link rel="stylesheet" href="styles/shops.css">
+    <link rel="stylesheet" href="styles/record.css">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="manifest" href="/manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -105,7 +106,7 @@
         </main>
     </div>
     <div id="dash-shops" style="display: none;">
-        <header class="header header-shop">
+        <header class="header header-record">
             <button id="butHomeShop" class="headerButton float-left" aria-label=""></button>
             <button id="butListShops" class="headerButton float-right" aria-label=""></button>
         </header>
@@ -124,10 +125,33 @@
             </div>
         </div>
     </div>
+    <div id="dash-records-user" style="display: none;">
+        <header class="header header-record">
+            <button id="butBackRecord" class="headerButton float-left" aria-label=""></button>
+            <h1 class="header__title">Historial de Compras</h1>
+        </header>
+        <main class="main-record">
+            <div class="card-record recordTemplate" hidden>
+                <p><small class="date-record">2018-12-12</small><small class="price-record float-right">$5,000.00</small></p>
+                <div class="row">
+                    <div class="col-4 icon-record"></div>
+                    <div class=" col-8 details-record">
+                        <div class="title-record">
+                            Zapatos CF0433
+                        </div>
+                        <div class="text-record">
+                            Plaza Andares
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
     <script src="scripts/app.js"></script>
     <script src="scripts/dash.js"></script>
     <script src="scripts/list-notif.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXLhcSlMm4GJzLpQtJ9AAbi8R-v08Tgug" asyn defer></script>
     <script src="scripts/shops.js"></script>
+    <script src="scripts/record.js"></script>
 </body>
 </html>

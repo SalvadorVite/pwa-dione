@@ -15,10 +15,6 @@
         alert("Ir a butProfile");
     });
 
-    document.getElementById('butRecords').addEventListener('click', function() {
-        alert("Ir a butRecords");
-    });
-
     dash.getPromotions = function() {
         var url = 'https://dione.blueboy.studio/ws/Generales/promociones.php';
         //Add web service code here

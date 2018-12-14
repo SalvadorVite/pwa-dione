@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/list-notif.css">
     <link rel="stylesheet" href="styles/shops.css">
     <link rel="stylesheet" href="styles/record.css">
+    <link rel="stylesheet" href="styles/profile.css">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="manifest" href="/manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -22,6 +23,7 @@
     <meta name="msapplication-TileColor" content="#2F3BA2">
 </head>
 <body>
+    <input type="hidden" id="id_app_us">
     <main id="dash-panel" class="container-promotions">
         <div class="wrap">
             <div id="arrow-left" class="arrow"></div>
@@ -131,20 +133,26 @@
             <h1 class="header__title">Historial de Compras</h1>
         </header>
         <main class="main-record">
+            <div class="card-record no-records" hidden>
+                <p class="text-center">No hay registro de compras.</p>
+            </div>
             <div class="card-record recordTemplate" hidden>
                 <p><small class="date-record">2018-12-12</small><small class="price-record float-right">$5,000.00</small></p>
-                <div class="row">
-                    <div class="col-4 icon-record"></div>
-                    <div class=" col-8 details-record">
-                        <div class="title-record">
-                            Zapatos CF0433
-                        </div>
-                        <div class="text-record">
-                            Plaza Andares
-                        </div>
-                    </div>
+                <div class="title-record">
+                    TIENDA ANDARES
                 </div>
             </div>
+        </main>
+    </div>
+    <div id="dash-profile" style="display: none;">
+        <header class="header header-profile">
+            <button id="butBackProfile" class="headerButton float-left" aria-label=""></button>
+            <h1 class="header__title">Perfil</h1>
+        </header>
+        <main class="main-profile">
+            <h4 class="text-center user-profile">Cliente Dione</h4>
+            <p class="text-center">Cliente Dione</p>
+            <a href="#" class="logout" id="logout">Cerrar sesión</a>
         </main>
     </div>
     <script src="scripts/app.js"></script>
@@ -153,5 +161,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXLhcSlMm4GJzLpQtJ9AAbi8R-v08Tgug" asyn defer></script>
     <script src="scripts/shops.js"></script>
     <script src="scripts/record.js"></script>
+    <script src="scripts/profile.js"></script>
 </body>
 </html>

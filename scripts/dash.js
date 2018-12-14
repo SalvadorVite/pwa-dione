@@ -11,9 +11,6 @@
     };
 
     //Event listeners for UI elements
-    document.getElementById('butProfile').addEventListener('click', function() {
-        alert("Ir a butProfile");
-    });
 
     dash.getPromotions = function() {
         var url = 'https://dione.blueboy.studio/ws/Generales/promociones.php';
@@ -127,6 +124,7 @@
         dioneLevel.textContent = levelDione.levelText;
         dioneLevel.classList.add(levelDione.levelClass);
         dionePoints.textContent = dataUser[0].puntos;
+        document.getElementById('id_app_us').value = dataUser[0].id_cliente;
     };
 
     dash.getLevelDione = function(p) {

@@ -1,0 +1,57 @@
+/*Styles for ListNotifications*/
+#dash-profile, .main-profile {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Helvetica', 'Verdana', sans-serif;
+    font-weight: 400;
+    font-display: optional;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.header-profile {
+    background: #ffffff !important;
+}
+
+.header-profile .header__title {
+    color: #000;
+    margin-left: 5px !important;
+}
+
+.main-profile {
+    padding-top: 60px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; 
+}
+
+.details-profile {
+    margin-top: 0.5rem;
+}
+
+.title-profile {
+    font-weight: 900;
+}
+
+.hide-profile {
+    display: none !important;
+}
+
+.show-profile {
+    display: block !important;
+}
+
+.header #butBackProfile {
+    background: url('../images/svg/iconfinder_back_172570.svg') center center no-repeat; 
+}
+
+.card-profile > .date-profile {
+    font-size: 70% !important;
+}

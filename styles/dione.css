@@ -193,7 +193,7 @@ body {
 
 .card-info {
     position: absolute;
-    background: #ffffffb0;
+    background: rgba(255, 255, 255, 0.70);
     height: 15rem;
     width: 100%;
     bottom: 0px;
@@ -201,7 +201,7 @@ body {
 
 .card-promotions {
     position: absolute;
-    background: #ffffff !important;
+    background: #fff !important;
     color: rgb(139, 55, 55);
     height: 3rem;
     width: 100%;
@@ -261,15 +261,15 @@ img.nots {
 }
 
 .silver {
-    color: #c0c0c0d0 !important;
+    color: rgba(129, 129, 127, 0.75) !important;
 }
 
 .gold {
-    color: #ffd900ab !important;
+    color: rgba(255, 217, 0, 0.67) !important;
 }
 
 .platinum {
-    color: #e5e4e2c0 !important;
+    color: rgba(129, 129, 127, 0.75) !important;
 }
 
 .image-level {

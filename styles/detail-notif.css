@@ -8,12 +8,12 @@
 
 .card-info-detail {
     position: absolute;
-    background: #ffffffb0;
+    background: rgba(255, 255, 255, 0.70);
     height: 100%;
 }
 
 .head-trans {
-    background: #e8dada85 !important;
+    background: rgba(232, 218, 218, 0.522) !important;
 }
 
 .header #butBack {

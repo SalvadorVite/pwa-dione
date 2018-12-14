@@ -21,6 +21,23 @@
 
     login.startSession = function (mail, pass) {
         var url = 'https://dione.blueboy.studio/ws/Acceso/login_usuario.php';
+        //Add web service code here
+        // if ('caches' in window) {
+        //     /*
+        //     * Check if the service worker has already cached this web service
+        //     * data. If the service worker has the data, then display the cached
+        //     * data while the app fetches the latest data.
+        //     */
+        //     caches.match(url).then(function(response) {
+        //         if (response) {
+        //             response.json().then(function updateFromCache(json) {
+        //                 login.dataUserDione = data;
+        //                 login.saveDataUser();
+        //                 window.location.replace('dashboard.html');
+        //             });
+        //         }
+        //     });
+        // }
         //Fetch data for start session
         var request = new XMLHttpRequest();
         request.onreadystatechange = function() {

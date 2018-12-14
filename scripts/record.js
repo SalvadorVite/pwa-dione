@@ -3,7 +3,9 @@
         dashPanel: document.querySelector('#dash-panel'),
         dashRecords: document.querySelector('#dash-records-user'),
         recordTemplate: document.querySelector('.recordTemplate'),
-        container: document.querySelector('.main-record')
+        noRecords: document.querySelector('.no-records'),
+        container: document.querySelector('.main-record'),
+        cardsRecords: document.getElementsByClassName('item-record')
     };
 
     //Event listeners for UI elements record
@@ -18,6 +20,34 @@
     });
 
     records.updateCards = function(data) {
+        records.removeCardsRecords();
+        if (!data) {
+            var card = records.noRecords;
+            card.removeAttribute('hidden');
+            return;
+        }
+        for (let i = 0; i < data.length; i++) {
+            var card = records.recordTemplate.cloneNode(true);
+            card.classList.remove('recordTemplate');
+            card.classList.add('item-record');
+            card.removeAttribute('hidden');
+            var dateRecord = card.querySelector('.date-record');
+            var priceRecord = card.querySelector('.price-record');
+            var titleRecord = card.querySelector('.title-record');
+            dateRecord.textContent = data[i].fecha_compra;
+            priceRecord.textContent = '$' + data[i].total_compra;
+            titleRecord.textContent = 'TIENDA ' + data[i].nombre;
+            records.container.appendChild(card);
+        }
+    };
+
+    /* records.updateCards = function(data) {
+        records.removeCardsRecords();
+        if (!data) {
+            var card = records.noRecords;
+            card.removeAttribute('hidden');
+            return;
+        }
         for (let i = 0; i < data.length; i++) {
             var card = records.recordTemplate.cloneNode(true);
             card.classList.remove('recordTemplate');
@@ -34,6 +64,14 @@
             textRecord.textContent = data[i].nombre;
             iconRecord.classList.add('shoes-icon');
             records.container.appendChild(card);
+        }
+    }; */
+
+    records.removeCardsRecords = function() {
+        for (let i = records.cardsRecords.length - 1; i >= 0 ; i--) {
+            if (records.cardsRecords[i]) {
+                records.cardsRecords[i].remove();   
+            }
         }
     };
 
@@ -69,7 +107,7 @@
             }
         };
 
-        var id_cliente = '5003';
+        var id_cliente = document.getElementById('id_app_us').value;
         var dataJSON = {'id_cliente': id_cliente, 'token': '616'};
         request.open('POST', url, true);
         request.setRequestHeader('content-type', 'application/json');

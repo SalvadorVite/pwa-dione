@@ -68,4 +68,19 @@
         localStorage.dataUserDione = JSON.stringify(login.dataUserDione);
     };
 
+    /*login.createCookie = function() {
+        setCookie("ld", "true", "100")
+    };
+
+    login.createCookie();
+
+    login.checkCookie = function() {        
+        var dr = getCookie("ld");
+        if (typeof(dr) !== "undefined" && dr !== "null" && dr === "true") {
+            window.location.replace('dashboard.html');
+        }
+    };
+
+    login.checkCookie();*/
+
 })();

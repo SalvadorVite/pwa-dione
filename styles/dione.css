@@ -143,8 +143,8 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    margin: 2rem;
-    border:1px solid black;
+    /*margin: 2rem;
+    border:1px solid black;*/
 }
 
 .welcome span {

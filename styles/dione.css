@@ -112,6 +112,22 @@ body {
     cursor: pointer; 
 }
 
+.dot {
+    margin-right: 0.5rem;
+    height: 6pt;
+    width: 6pt;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-gray {
+    background-color: #AFAFAF;
+}
+
+.dot-black {
+    background-color: #000000;
+}
+
 .container-promotions {
     position: relative;
     -webkit-box-flex: 1;
@@ -121,44 +137,6 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-}
-
-.container-logo {
-    background: #fff url("../images/logo.png") center center no-repeat;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-}
-
-.welcome {
-    background: #FFF;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    /*margin: 2rem;
-    border:1px solid black;*/
-}
-
-.welcome span {
-    color: #f00;
-    font-style: italic;
-    top: 5px;
-}
-.welcome strong {
-    position: relative;
-    top: 40%;
-    transform: translateY(-50%);
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1.4rem;
 }
 
 .session {

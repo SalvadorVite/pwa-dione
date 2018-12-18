@@ -1,6 +1,6 @@
 (function() {
     var welcome = {
-        cards: 3
+        cards: 4
     };
 
     welcome.nextSlider = function() {
@@ -21,9 +21,17 @@
         }
     };
 
-    var sliders = document.getElementsByClassName('welcome');
+    var sliders = document.getElementsByClassName('w-card');
 
     for (let i = 0; i < sliders.length; i++) {
         sliders[i].addEventListener('click', welcome.nextSlider, false);
+    }
+
+    var btnToLogin = document.getElementsByClassName('btn-to-login');
+
+    for (let index = 0; index < btnToLogin.length; index++) {
+        btnToLogin[index].addEventListener('click', function(e) {
+            window.location.replace('login.html');
+        });
     }
 })();

@@ -119,22 +119,33 @@
         var userName = document.querySelector('.user-name');
         var dioneLevel = document.querySelector('.dione-level');
         var dionePoints = document.querySelector('.dione-points');
+        var progress = document.querySelector('#progress-level');
+        var textPro = document.querySelector('.text-progress');
         userName.textContent = dataUser[0].nombres + ' ' + dataUser[0].ape_materno;
-        var levelDione = dash.getLevelDione(dataUser[0].puntos);
+        var levelDione = (dataUser[0].puntos !== null) ? dash.getLevelDione(dataUser[0].puntos) : dash.getLevelDione(0);
         dioneLevel.textContent = levelDione.levelText;
         dioneLevel.classList.add(levelDione.levelClass);
-        dionePoints.textContent = dataUser[0].puntos;
+        progress.classList.add(levelDione.progressClass);
+        progress.style.width = levelDione.percentajecompleted + '%';
+        progress.setAttribute('aria-valuenow', levelDione.percentajecompleted);
+        textPro.textContent = levelDione.percentajecompleted + '%';
+        dionePoints.textContent = (dataUser[0].puntos_disponibles !== null) ? dataUser[0].puntos_disponibles : 0;
         document.getElementById('id_app_us').value = dataUser[0].id_cliente;
     };
 
     dash.getLevelDione = function(p) {
-        var level = {levelText: 'Plata', levelClass: 'silver'};
-        if (p >= 0 && p < 10000) {
-            level = {levelText: 'Plata', levelClass: 'silver'};
-        } else if(p >= 10000 && p < 20000) { 
-            level = {levelText: 'Oro', levelClass: 'gold'};
-        } else if(p >= 20000) {
-            level = {levelText: 'Platino', levelClass: 'platinum'};
+        var level = {levelText: 'Plata', levelClass: 'silver', percentajecompleted: 0, percentajeMissing: 100, progressClass: "bg-silver"};
+        if (p >= 0 && p < 12000) {
+            var pc = Math.floor((parseInt(p) * 100) / 12000);
+            var pm = 100 - pc;
+            level = {levelText: 'Plata', levelClass: 'silver', percentajecompleted: pc, percentajeMissing: pm, progressClass: "bg-silver"};
+        } else if(p >= 12000 && p < 25000) {
+            var pc = parseInt(p) - 12000;
+            pc = Math.floor((pc * 100) / 13000);
+            var pm = 100 - pc;
+            level = {levelText: 'Oro', levelClass: 'gold', percentajecompleted: pc, percentajeMissing: pm, progressClass: "bg-gold"};
+        } else if(p >= 25000) {
+            level = {levelText: 'Platino', levelClass: 'platinum', percentajecompleted: 100, percentajeMissing: 0, progressClass: "bg-platinum"};
         }
         return level;
     };

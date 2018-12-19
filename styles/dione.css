@@ -210,23 +210,30 @@ img.nots {
 
 .card-profile {
     position: absolute;
-    height: 4rem;
+    height: 3.5rem;
     width: 100%;
     top: 3rem;
 }
 
 .card-shop {
     position: absolute;
-    height: 4rem;
+    height: 3.6rem;
     width: 100%;
-    top: 7rem;
+    top: 6.5rem;
 }
 
 .card-records {
     position: absolute;
-    height: 4rem;
+    height: 3.5rem;
     width: 100%;
-    top: 11rem;
+    top: 10rem;
+}
+
+.progress-dione {
+    position: absolute;
+    margin: 0px 10px;
+    width: 100%;
+    bottom: 0.2rem;
 }
 
 .card-profile p, .card-shop p, .card-records p {
@@ -236,6 +243,18 @@ img.nots {
 
 .dione-level {
     font-weight: bold;
+}
+
+.bg-silver {
+    background-color: rgba(129, 129, 127, 0.75) !important;
+}
+
+.bg-gold {
+    background-color: rgba(255, 217, 0, 0.67) !important;
+}
+
+.bg-platinum {
+    background-color: rgba(129, 129, 127, 0.75) !important;
 }
 
 .silver {

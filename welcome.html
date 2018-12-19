@@ -1,3 +1,18 @@
+<!--
+Convert file to php and check if the cookie to show welcome screen is active
+<?php 
+    if (isset($_COOKIE['dw_']) && $_COOKIE['dw_'] != null && $_COOKIE['dw_'] == true) {
+        if (isset($_COOKIE['ld_']) && $_COOKIE['ld_'] != null && $_COOKIE['ld_'] == true) {
+            header('Location: dashboard.html');
+            exit;
+        } else {
+            header('Location: login.html');
+            exit;
+        }
+    } else {
+        //Code
+    }
+?>-->
 <!DOCTYPE html>
 <html lang="en">
 <head>

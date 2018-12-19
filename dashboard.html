@@ -1,3 +1,13 @@
+<!--
+Convert file to php and check if the cookie to logged is active
+<?php 
+    if (isset($_COOKIE['ld_']) && $_COOKIE['ld_'] != null && $_COOKIE['ld_'] == true) {
+        //Code
+    } else {
+        header('Location: login.html');
+        exit;
+    }
+?>-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,9 +71,14 @@
             <div class="row card-records">
                 <div class="col-2"></div>
                 <div class="col-8">
-                    <p class="text-center"><span>Estas a 2 pares del platino.</span></p>
+                    <!--<p class="text-center"><span>Estas a 2 pares del platino.</span></p>-->
                 </div>
                 <div class="col-2 icons"><img id="butRecords" class="dash-icons" src="images/dash/historial.png" alt=""></div>
+            </div>
+            <div class="progress progress-dione">
+                <div id="progress-level" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">
+                    <span class="text-progress"></span>
+                </div>
             </div>
         </div>
     </main>

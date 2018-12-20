@@ -31,6 +31,7 @@ var filesToCache = [
     '/images/welcome-1.jpg',
     '/images/portada/Depositphotos_33622661_xl-2015.jpg',
     '/images/portada/Depositphotos_173511934_xl-2015.jpg',
+    '/images/portada/Depositphotos_59835219_xl-a2015.jpg',
     '/images/icons/icon-128x128.png',
     '/images/icons/icon-144x144.png',
     '/images/icons/icon-152x152.png',

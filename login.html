@@ -7,6 +7,7 @@
     <title>Dione Rewards</title>
     <link rel="stylesheet" href="styles/dione.css">
     <link rel="stylesheet" href="styles/forms.css">
+    <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="manifest" href="/manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,11 +18,13 @@
     <meta name="msapplication-TileColor" content="#2F3BA2">
 </head>
 <body>
-    <div class="session row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4 col-sm-12 col-xs-12">
-            <img src="images/session.png" class="img-responsive sessionLogo" alt="">
-            <form name="frmSession" id="frmSession">
+    <div class="bg-session" hidden>
+        <header class="">
+            <div class="login-log"></div>
+            <button id="butStoresLogin" class="headerButton float-right" aria-label=""></button>
+        </header>
+        <div class="session sessionStart">
+            <form name="frmSession" class="formDataDione" id="frmSession">
                 <div class="form-group">
                     <label for="txtEmail">Email</label>
                     <input type="email" class="form-control" name="txtEmail" id="txtEmail" placeholder="Dirección de correo electrónico" value="iselin@gmail.com">
@@ -31,11 +34,78 @@
                     <input type="password" class="form-control" name="txtPassword" id="txtPassword" placeholder="Ingresa tu contraseña" value="Dione">
                 </div>
                 <p class="text-center ptop2"><button type="submit" id="submitLogin" class="btn btn-black">Iniciar sesión</button></p>
-                <p class="text-center"><a href="register.html">REGISTRATE</a></p>
+                <!--<p class="text-center"><a href="register.html">REGISTRATE</a></p>-->
             </form>
         </div>
-        <div class="col-md-4"></div>
+        <div class="options-login oa">
+            <a href="#" class="p border-r">Crear Cuenta</a>
+            <a href="#" class="p">Inicio</a>
+        </div>
     </div>
+    <div class="bg-register" hidden>
+        <header class="">
+            <div class="login-log"></div>
+        </header>
+        <div class="session sessionRegister">
+            <form name="frmSessionR" class="formDataDione" id="frmSessionR">
+                <div class="form-group">
+                    <label for="txtEmailR">Email</label>
+                    <input type="email" class="form-control" name="txtEmailR" id="txtEmailR" placeholder="daniel@blueboystudio.com">
+                </div>
+                <div class="form-group">
+                    <label for="txtPasswordR">Contraseña</label>
+                    <input type="password" class="form-control" name="txtPasswordR" id="txtPasswordR" placeholder=".....">
+                </div>
+                <div class="form-group">
+                    <label for="txtPasswordR">Confirma tu Contraseña</label>
+                    <input type="password" class="form-control" name="txtPasswordRR" id="txtPasswordRR" placeholder=".....">
+                </div>
+                <div class="form-group">
+                    <label for="txtNameR">Nombre</label>
+                    <input type="text" class="form-control" name="txtNameR" id="txtNameR" placeholder="Daniel">
+                </div>
+                <div class="form-group">
+                    <label for="txtSurnameR">Apellido</label>
+                    <input type="text" class="form-control" name="txtSurnameR" id="txtSurnameR" placeholder="Benitez">
+                </div>
+                <div class="form-group">
+                    <label for="txtPhoneR">Teléfono</label>
+                    <input type="text" class="form-control" name="txtPhoneR" id="txtPhoneR" placeholder="333 8918 3889">
+                </div>
+                <div class="form-group">
+                    <label for="txtNTargetR">Tarjeta Dione</label>
+                    <input type="text" class="form-control" name="txtNTargetR" id="txtNTargetR" placeholder="812931092">
+                </div>
+                <p class="text-center"><button type="submit" id="submitLoginR" class="btn btn-black">Aceptar</button></p>
+            </form>
+            <div class="options-login ob">
+                <a href="#" class="p border-r">Login</a>
+                <a href="#" class="p">Inicio</a>
+            </div>
+        </div>
+    </div>
+    <div class="bg-confirm">
+        <header class="">
+            <div class="login-log"></div>
+        </header>
+        <div class="session sessionConfirm">
+            <strong>PORFAVOR REVISA Y CONFIRMA TUS DATOS:</strong><br>
+            <span>Nombre:</span>
+            <span>Daniel Benitez Ramírez</span><br>
+            <span>Correo:</span><br>
+            <span>daniel@blueboystudio.com</span><br>
+            <span>Teléfono:</span><br>
+            <span>33389183889</span><br>
+            <span>Tarjeta Mundo Dione:</span><br>
+            <span>812931092</span><br>
+            <p><input type="checkbox" name="" id="">Acepto términos y condiciones y Politica de Privacidad. Conoce nuestro AVISO DE PRIVACIDAD</p>
+            <p class="text-center"><button type="submit" id="submitLoginR" class="btn btn-black">Crear Cuenta</button></p>
+        </div>
+    </div>
+    <div class="options-login oa">
+            <a href="#" class="p border-r">Login</a>
+            <a href="#" class="p">Inicio</a>
+        </div>
     <script src="scripts/cookies.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/login.js"></script>

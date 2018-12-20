@@ -81,8 +81,8 @@
 }
 
 .pointers {
-    width: 245px;
-    height: 40px;
+    width: 100%;
+    max-height: 40px;
     position: absolute;
     left: 0;
     right: 0;
@@ -243,16 +243,10 @@
     }
 
     .sl1-text {
-        width: 240px;
+        width: 173px;
         height: 120px;
         left: 1rem;
         font-size: 1.4rem;
-    }
-
-    .pointers {
-    }
-
-    .w-text {
     }
 }
 
@@ -265,10 +259,10 @@
     }
 
     .sl1-text {
-        width: 270px;
+        width: 192px;
         height: 130px;
         left: 1rem;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 }
 
@@ -281,10 +275,10 @@
     }
 
     .sl1-text {
-        width: 270px;
+        width: 250px;
         height: 130px;
         left: 1rem;
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
 }
 
@@ -297,10 +291,10 @@
     }
 
     .sl1-text {
-        width: 351px;
+        width: 307px;
         height: 169px;
         left: 1rem;
-        font-size: 2.8rem;
+        font-size: 2.7rem;
     }
 } 
 
@@ -314,10 +308,10 @@
     }
 
     .sl1-text {
-        width: 351px;
-        height: 169px;
+        width: 384px;
+        height: 208px;
         left: 1rem;
-        font-size: 3.8rem;
+        font-size: 3.2rem;
     }
 }
 

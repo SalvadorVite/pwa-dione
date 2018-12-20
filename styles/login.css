@@ -1,0 +1,191 @@
+.bg-session, .bg-register, .bg-confirm {
+    background: url("../images/portada/Depositphotos_59835219_xl-a2015.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    color: #fff !important;
+}
+
+.bg-session:before, .bg-register:before, .bg-confirm:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;   
+    background-color: #232429;
+    opacity: 0.34;
+}
+
+.bg-session header, .bg-register header, .bg-confirm header {
+    width: 100%;
+    height: 56px;
+    background: rgba(255, 255, 255, 0) !important;
+    position: fixed;
+    padding: 16px 16px 0 16px;
+    display: inline-block;
+}
+
+header #butStoresLogin {
+    width: 24px;
+    height: 24px;
+    /*margin-right: 16px;*/
+    text-indent: -30000px;
+    overflow: hidden;
+    opacity: 0.54;
+    -webkit-transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
+    transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
+    border: none;
+    outline: none;
+    cursor: pointer; 
+    background: url('../images/svg/maps-icon.svg') center center no-repeat; 
+}
+
+.session {
+    width: 100%;
+    padding: 3rem;
+    position: absolute;
+}
+
+.sessionStart {
+    top: 8rem;
+}
+
+.sessionRegister {
+    top: 0rem;
+}
+
+.sessionConfirm {
+    top: 3rem;
+}
+
+.session label {
+    font-weight: normal;
+}
+
+.login-log {
+    margin-left: 16px;
+    background: url("../images/logo1-sm.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:absolute;
+	max-width:100%;
+	max-height:100%;
+    overflow:auto;
+    /*Rplace for breakppoints*/
+    width: 104px;
+    height: 40px;
+    left:0; right:0;
+    top:1rem; bottom:0;
+}
+
+.options-login {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* top: 0; */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    color: rgb(35, 36, 41);
+    font-size: 1rem;
+}
+
+.oa {
+    bottom: 1.5rem;
+}
+
+.ob {
+    margin-top: 1.5rem;
+}
+
+.options-login .p {
+    color: #FFFFFF !important;
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.options-login .border-r {
+    border-right: 1px solid #FFFFFF;
+}
+
+#frmSession label, #frmSession input {
+    color: #fff !important;
+}
+
+#frmSession input {
+    font-weight: normal;
+    font-size: 1.2rem;
+    padding-left: 0px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    border-radius: 0px;
+}
+
+#frmSession input:focus {
+    border-color: inherit !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #007bff !important;
+}
+
+.btn-black {
+    font-size: 1.2rem !important;
+    font-weight: normal !important;
+    width: 70%;
+    color: #000;
+    background-color: #707070;
+    border-color: #707070;
+    border-radius: 22px !important;
+}
+
+.btn-black:hover {
+    border-color: inherit !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.btn-black.focus,.btn-success:focus {
+    box-shadow: 0 0 0 .2rem rgba(0, 0, 0, 0.5)
+}
+
+
+/*#frmSessionR*/
+#frmSessionR label, #frmSessionR input {
+    color: #fff !important;
+}
+
+#frmSessionR input {
+    font-weight: normal;
+    font-size: 1.2rem;
+    padding-left: 0px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    border-radius: 0px;
+}
+
+#frmSessionR input:focus {
+    border-color: inherit !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #007bff !important;
+}

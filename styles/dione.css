@@ -139,28 +139,6 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
-.session {
-    background: #FFF;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    margin: 2rem;
-    position: relative;
-}
-
-.session label {
-    font-weight: bold;
-}
-
-.sessionLogo {
-    padding-bottom: 4rem;
-    padding-top: 2rem;
-}
-
 .img-responsive {
     display: block;
     margin-right: auto;

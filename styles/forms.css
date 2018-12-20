@@ -86,21 +86,3 @@ label {
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-
-.btn-black {
-    color: #fff;
-    text-transform: uppercase;
-    background-color: #000000;
-    border-color: #000000;
-    border-radius: 22px !important;
-}
-
-.btn-black:hover {
-    color: #fff;
-    background-color: #111111;
-    border-color: #0c0c0c
-}
-
-.btn-black.focus,.btn-success:focus {
-    box-shadow: 0 0 0 .2rem rgba(0, 0, 0, 0.5)
-}

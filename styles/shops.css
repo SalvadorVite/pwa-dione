@@ -31,11 +31,16 @@
     background: url('../images/svg/iconfinder_back_172570.svg') center center no-repeat;
 }
 
-.header #butListShops {
+.txt-shops {
+    font-family: "Gotham Thin";
+    color: #880000 !important;
+}
+
+/*.header #butListShops {
     background: url('../images/svg/home.svg') center center no-repeat;
 }
 
-/*.dialog-buttons #butShowAll {
+.dialog-buttons #butShowAll {
     background: url('../images/svg/iconfinder_Tilda_Icons_1ed_location_3586361.svg') center center no-repeat;
 }*/
 

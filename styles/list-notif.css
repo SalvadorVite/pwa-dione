@@ -39,7 +39,8 @@
 }
 
 .txt-tinto {
-    color: #880000;
+    font-family: "Gotham Thin";
+    color: #880000 !important;
 }
 
 .details-notif {
@@ -59,5 +60,5 @@
 }
 
 .header #butHomeList {
-    background: url('../images/svg/home.svg') center center no-repeat; 
+    background: url(../images/svg/iconfinder_back_172570.svg) center center no-repeat;
 }

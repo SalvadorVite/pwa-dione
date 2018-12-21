@@ -25,10 +25,10 @@
 }
 
 .div-logo-center {
-    background: url("../images/logo1.png");
+    background: url("../images/svg/LG_GD_WHT_CENTER.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    /*background-size: cover;*/
 	position:absolute;
     left:0; right:0;
     top:0; bottom:0;

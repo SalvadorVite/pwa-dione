@@ -3,8 +3,33 @@
 }
 
 @font-face {
-    font-family: "Montserrat";
-    src: url("../styles/fonts/Montserrat/Montserrat-Regular.ttf");
+    font-family: "Gotham Black";
+    src: url("../styles/fonts/Gotham/GOTHAM-BLACK.TTF");
+}
+
+@font-face {
+    font-family: "Gotham Book";
+    src: url("../styles/fonts/Gotham/Gotham-Book.otf");
+}
+
+@font-face {
+    font-family: "Gotham Light";
+    src: url("../styles/fonts/Gotham/GOTHAM-LIGHT.TTF");
+}
+
+@font-face {
+    font-family: "Gotham Bold";
+    src: url("../styles/fonts/Gotham/GOTHAM-BOLD.TTF");
+}
+
+@font-face {
+    font-family: "Gotham Thin";
+    src: url("../styles/fonts/Gotham/GOTHAM-THIN.TTF");
+}
+
+@font-face {
+    font-family: "Gotham Medium";
+    src: url("../styles/fonts/Gotham/GOTHAM-MEDIUM.TTF");
 }
 
 html, body {
@@ -124,15 +149,15 @@ body {
 }
 
 #butShops {
-    background: url('../images/svg/maps-icon.svg') center center no-repeat; 
+    background: url('../images/svg/IC_mapa.svg') center center no-repeat; 
 }
 
 .login-log {
     margin-left: 16px;
-    background: url("../images/logo1-sm.png");
+    background: url("../images/svg/LG_GD_WHT_CENTER.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    /*background-size: cover;*/
     position:absolute;
 	max-width:100%;
 	max-height:100%;

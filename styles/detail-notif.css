@@ -9,7 +9,7 @@
 }
 
 .tinto {
-    background-color: rgb(144, 0, 0, 0.50);
+    background-color: rgb(144, 0, 0, 0.50) !important;
 }
 
 .head-trans {
@@ -22,4 +22,12 @@
 
 .header #butListPromotions {
     background: url('../images/svg/notifications-list.svg') center center no-repeat; 
+}
+
+.title-promo-det {
+    font-family: "Gotham Book";
+}
+
+.title-promo-detail, .hashtag {
+    font-family: "Gotham Light";
 }

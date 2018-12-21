@@ -60,27 +60,19 @@ Convert file to php and check if the cookie to logged is active
             <div id="arrow-right" class="arrow"></div>
         </div>
         <div class="card-info">
-            <div class="row card-promotions" style="display: none;">
-                <div class="col-2"></div>
-                <div class="col-8 text-promo">
-                    <p class="text-center"><span class="title-promo">18 meses sin intereses</span></p>
-                    <p class="text-center"><marquee behavior="" direction="" class="sub-promo">Aprovecha los mejores descuentos de navidad.</marquee></p>
-                </div>
-                <div class="col-2 icons"><img id="butNotifications1" class="nots" src="images/svg/Notificacionldpi.svg" alt=""></div>
-            </div>
             <div class="row card-profile">
                 <div class="col-2">
                     <p class=""><strong class="user-name">ISELIN</strong><br><strong class="sur-name">PEREZ</strong></p>
                 </div>
                 <div class="col-8">
-                    <img src="images/dash/nivel.png" class="image-level" alt="">
+                    <img src="images/svg/IC_plata.png" class="image-level" alt="">
                 </div>
-                <div class="col-2 icons"><img id="butNotifications" class="nots" src="images/svg/Notificacionldpi.svg" alt=""></div>
+                <div class="col-2 icons" style="padding-top: 12px;"><img id="butNotifications" class="nots" src="images/svg/IC_notificaciones.svg" alt=""></div>
             </div>
             <div class="row card-shop">
-                <div class="col-5 icons"><img id="butProfile" class="dash-icons left-profile" src="images/dash/perfil.png" alt=""></div>
+                <div class="col-5 icons"><img id="butProfile" class="dash-icons left-profile" src="images/svg/IC_perfil.svg" alt=""></div>
                 <div class="col-5"></div>
-                <div class="col-2 icons"><img id="butRecords" class="dash-icons" src="images/dash/historial.png" alt=""></div>
+                <div class="col-2 icons"><img id="butRecords" class="dash-icons" src="images/svg/IC_historial.svg" alt=""></div>
             </div>
             <div class="card-progress">
                 <div class="progress-text-data">
@@ -88,17 +80,6 @@ Convert file to php and check if the cookie to logged is active
                     <strong class="dione-level" style="float: center;">PLATA</strong>
                     <span class="dione-nextlevel" style="float: right;">ORO</span>
                 </div>
-                <!--<div class="row progress-text-data">
-                    <div class="col-4">
-                        <span class="dione-points">0 puntos.</span>
-                    </div>
-                    <div class="col-4">
-                        <strong class="dione-level" style="text-align: center;">PLATA</strong>
-                    </div>
-                    <div class="col-4">
-                        <span class="dione-nextlevel" style="text-align: right;">ORO</span>
-                    </div>
-                </div>-->
                 <div class="progress progress-dione">
                     <div id="progress-level" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
@@ -150,6 +131,9 @@ Convert file to php and check if the cookie to logged is active
                     <div class="text-notification">
                         Descuentos de fin de año incia diciembre 31
                     </div>
+                    <div class="subtext-notification">
+                        Descuentos de fin de año incia diciembre 31
+                    </div>
                 </div>
             </div>
         </main>
@@ -157,7 +141,8 @@ Convert file to php and check if the cookie to logged is active
     <div id="dash-shops" style="display: none;">
         <header class="header header-record">
             <button id="butHomeShop" class="headerButton float-left" aria-label=""></button>
-            <button id="butListShops" class="headerButton float-right" aria-label=""></button>
+            <!--<button id="butListShops" class="headerButton float-right" aria-label=""></button>-->
+            <h1 id="butListShops" class="header__title float-right txt-tinto">TIENDAS</h1>
         </header>
         <main class="main-shop" id="map">
         </main>
@@ -177,7 +162,7 @@ Convert file to php and check if the cookie to logged is active
     <div id="dash-records-user" style="display: none;">
         <header class="header header-record">
             <button id="butBackRecord" class="headerButton float-left" aria-label=""></button>
-            <h1 class="header__title float-right">Historial de Compras</h1>
+            <h1 class="header__title float-right txt-tinto">COMPRAS</h1>
         </header>
         <main class="main-record">
             <div class="card-record no-records" hidden>
@@ -194,7 +179,7 @@ Convert file to php and check if the cookie to logged is active
     <div id="dash-profile" style="display: none;">
         <header class="header header-profile">
             <button id="butBackProfile" class="headerButton float-left" aria-label=""></button>
-            <h1 class="header__title float-right">Perfil</h1>
+            <h1 class="header__title float-right txt-tinto">PERFIL</h1>
         </header>
         <main class="main-profile">
             <h4 class="text-center user-profile">Cliente Dione</h4>
@@ -207,7 +192,7 @@ Convert file to php and check if the cookie to logged is active
     <script src="scripts/app.js"></script>
     <script src="scripts/dash.js"></script>
     <script src="scripts/list-notif.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXLhcSlMm4GJzLpQtJ9AAbi8R-v08Tgug" asyn defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKrTDQZIbzOcHWqywm0xI-5-NhezjJR4Q" asyn defer></script>
     <script src="scripts/shops.js"></script>
     <script src="scripts/record.js"></script>
     <script src="scripts/profile.js"></script>

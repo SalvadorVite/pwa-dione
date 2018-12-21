@@ -36,19 +36,21 @@
 }
 
 .logo-sl1 {
-    background: url("../images/logo1-sm.png");
+    background: url("../images/svg/lg_dash_mini_up.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    /*background-size: cover;*/
     position:absolute;
 	max-width:100%;
 	max-height:100%;
-	overflow:auto;
+    overflow:auto;
+    left: 1rem !important;
 }
 
 .sl1-text {
-	width: 270px;
-    height: 130px;
+    font-family: "Gotham Black";
+	width: 80%;
+    height: 350px;
 	position:absolute;
     left:1rem; right:0;
     top:0; bottom:0;
@@ -63,7 +65,8 @@
 }
 
 .w-text {
-    width: 245px;
+    font-family: "Gotham Book";
+    width: 85%;
     height: 5rem;
     position: absolute;
     left: 0;
@@ -81,12 +84,14 @@
 }
 
 .logo-sliders {
-    width: 192px;
-    height: 66px;
-	background: url("../images/logo1-sm-black.png");
+    width: 165px;
+    height: 50px;
+    background: url("../images/svg/LG_GD_BLK_CENTER.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 	position:absolute;
     left:0; right:0;
-    top:4rem; bottom:0;
+    top:1rem; bottom:0;
     margin-left: auto;
     margin-right: auto;
 	max-width:100%;
@@ -95,12 +100,13 @@
 }
 
 .text-sliders {
+    font-family: "Gotham Book";
     width: 164pt;
     height: 40pt;
     position: absolute;
     left: 0;
     right: 0;
-    top: 8rem; 
+    top: 75px;
     /*bottom: 0;*/
     margin-left: auto;
     margin-right: auto;
@@ -117,7 +123,7 @@
     height: 50%;
 	position:absolute;
     left:0; right:0;
-    top:12rem; bottom:0;
+    top:130px; bottom:0;
     margin-left: auto;
     margin-right: auto;
 	max-width:100%;
@@ -145,11 +151,12 @@
 }
 
 .w-card-button {
+    font-family: "Gotham Book";
     position: absolute;
     left: 0;
     right: 0;
     /* top: 0; */
-    bottom: 7rem;
+    bottom: 70px;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
@@ -185,13 +192,14 @@
 }
 
 .w-card-text {
+    font-family: "Gotham Book";
     width: 245px;
-    height: 40px;
+    /*height: 40px;*/
     position: absolute;
     left: 0;
     right: 0;
     /* top: 0; */
-    bottom: 3rem;
+    bottom: 30px;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
@@ -218,17 +226,19 @@
 
 @media only screen and (min-width: 300px) {
     .logo-sl1 {
-        width: 173px;
+        width: 80%;
         height: 60px;
         left:0; right:0;
         top:4rem; bottom:0;
     }
 
     .sl1-text {
-        width: 173px;
-        height: 120px;
-        left: 1rem;
-        font-size: 1.4rem;
+        font-size: 2.5rem;
+    }
+
+    .card-sliders {
+        width: 70%;
+        height: 50%;
     }
 }
 
@@ -241,10 +251,12 @@
     }
 
     .sl1-text {
-        width: 192px;
-        height: 130px;
-        left: 1rem;
-        font-size: 2rem;
+        font-size: 3.5rem;
+    }
+
+    .card-sliders {
+        width: 70%;
+        height: 50%;
     }
 }
 
@@ -257,10 +269,12 @@
     }
 
     .sl1-text {
-        width: 250px;
-        height: 130px;
-        left: 1rem;
-        font-size: 2.3rem;
+        font-size: 4.2rem;
+    }
+
+    .card-sliders {
+        width: 70%;
+        height: 60%;
     }
 }
 
@@ -273,10 +287,12 @@
     }
 
     .sl1-text {
-        width: 307px;
-        height: 169px;
-        left: 1rem;
-        font-size: 2.7rem;
+        font-size: 4.7rem;
+    }
+
+    .card-sliders {
+        width: 70%;
+        height: 65%;
     }
 } 
 
@@ -290,10 +306,12 @@
     }
 
     .sl1-text {
-        width: 384px;
-        height: 208px;
-        left: 1rem;
-        font-size: 3.2rem;
+        font-size: 6.2rem;
+    }
+
+    .card-sliders {
+        width: 70%;
+        height: 70%;
     }
 }
 

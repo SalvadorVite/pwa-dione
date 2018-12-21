@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.998 21.253">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-size: 5px;
+        font-family: Montserrat-Light, Montserrat;
+        font-weight: 300;
+      }
+    </style>
+  </defs>
+  <g id="lg_dash_mini_up" transform="translate(-33.23 -64.04)">
+    <g id="lg_dash_mini_top">
+      <g id="Group_9" data-name="Group 9" transform="translate(33.23 64.04)">
+        <g id="Group_4" data-name="Group 4" transform="translate(18.255 0.243)">
+          <path id="Path_4" data-name="Path 4" class="cls-1" d="M720.031,366.121H715.26v-.234l.477-.02c.79-.033.974-.135.974-2.632v-6.567c0-2.5-.184-2.6-.974-2.632l-.477-.02v-.237h4.771v.237l-.477.023c-.79.033-.977.135-.977,2.632v6.567c0,2.5.184,2.6.977,2.632l.477.02Z" transform="translate(-715.26 -353.78)"/>
+        </g>
+        <g id="Group_5" data-name="Group 5" transform="translate(29.488)">
+          <path id="Path_5" data-name="Path 5" class="cls-1" d="M750.776,365.858c-4.05,0-6.166-3.231-6.166-6.426a6.681,6.681,0,0,1,1.6-4.448,6.339,6.339,0,0,1,9.137,0,6.684,6.684,0,0,1,1.6,4.448C756.941,362.624,754.823,365.858,750.776,365.858Zm0-12.558c-3.553,0-4.08,3.856-4.08,6.149s.53,6.153,4.08,6.153,4.08-3.856,4.076-6.153S754.326,353.3,750.776,353.3Z" transform="translate(-744.61 -353.04)"/>
+        </g>
+        <g id="Group_6" data-name="Group 6" transform="translate(49.173 0.23)">
+          <path id="Path_6" data-name="Path 6" class="cls-1" d="M808.86,366.252h-.546l-.03-.033-9.472-11.048v6.495c0,1.642.579,4.1,1.823,4.169l.477.02v.234H796.93v-.23l.29-.026c.859-.079,1.181-1.211,1.181-4.169v-5.034c0-2.481-.234-2.6-1.046-2.632l-.424-.023v-.234H800.1l.026.036,8.318,9.884v-5.5c0-1.642-.579-4.1-1.823-4.165l-.477-.02v-.237h4.182v.23l-.29.026c-.862.079-1.181,1.208-1.181,4.165Z" transform="translate(-796.93 -353.74)"/>
+        </g>
+        <g id="Group_7" data-name="Group 7" transform="translate(69.337 0.237)">
+          <path id="Path_7" data-name="Path 7" class="cls-1" d="M862.383,366.1H851.72v-.234l.477-.02c.79-.033.98-.135.98-2.632v-6.567c0-2.5-.191-2.6-.98-2.632l-.477-.02v-.237h10.295v3.451H861.8l-.224-.678c-.773-2.333-2.063-2.517-3.662-2.517h-2.106c-.684,0-.77.1-.77,2.632v2.994h2.046a1.892,1.892,0,0,0,2.188-1.556l.132-.464h.224v4.3H859.4l-.132-.464a1.891,1.891,0,0,0-2.188-1.556h-2.046v3.32c0,2.537.089,2.632.77,2.632h2.471c1.648,0,2.718-.207,3.659-3.06l.227-.678h.22Z" transform="translate(-851.72 -353.76)"/>
+        </g>
+        <g id="Group_8" data-name="Group 8" transform="translate(0 0.24)">
+          <path id="Path_8" data-name="Path 8" class="cls-1" d="M670.544,366.118H665.8v-.4h4.721c2.645,0,4.228-2.158,4.228-5.774,0-3.5-1.661-5.768-4.231-5.768H665.8v-.4h4.721a5.887,5.887,0,0,1,6.314,6.156A5.97,5.97,0,0,1,670.544,366.118Z" transform="translate(-665.8 -353.77)"/>
+        </g>
+      </g>
+      <text id="REWARDS" class="cls-2" transform="translate(84.138 84.293)"><tspan x="0" y="0">REWARDS</tspan></text>
+    </g>
+  </g>
+</svg>

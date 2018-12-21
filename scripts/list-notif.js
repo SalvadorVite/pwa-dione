@@ -88,9 +88,11 @@
             var divDetail = card.querySelector('.details-notif');
             var divTitle = card.querySelector('.title-notification');
             var divText = card.querySelector('.text-notification');
+            var divSubText = card.querySelector('.subtext-notification');
             divDetail.setAttribute('id', data[i].id_evento);
-            divTitle.textContent = data[i].encabezado;
-            divText.textContent = data[i].cuerpo;
+            divTitle.textContent = data[i].nombre;
+            divText.textContent = data[i].encabezado;
+            divSubText.textContent = data[i].cuerpo;
             listNotif.container.appendChild(card);
         }
         listNotif.seePreview();

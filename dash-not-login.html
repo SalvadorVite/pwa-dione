@@ -1,0 +1,76 @@
+<!--
+Convert file to php and check if the cookie to logged is active
+<?php 
+    if (isset($_COOKIE['ld_']) && $_COOKIE['ld_'] != null && $_COOKIE['ld_'] == true) {
+        //Code
+    } else {
+        header('Location: login.html');
+        exit;
+    }
+?>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dione Rewards Not Login</title>
+    <link rel="stylesheet" href="styles/dione.css">
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/dialog.css">
+    <link rel="stylesheet" href="styles/shops.css">
+    <link rel="stylesheet" href="styles/dash-not-login.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Dione Rewards">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+</head>
+<body>
+    <main id="dash-panel" class="container-dash">
+        <header class="">
+            <div class="login-log"></div>
+            <button id="butStoresLogin" class="headerButton float-right" aria-label=""></button>
+        </header>
+        <div class="wrap">
+            <div id="arrow-left" class="arrow"></div>
+            <div id="slider">
+                <div class="slide slideTemplate" hidden>
+                    <div class="slide-content"></div>
+                </div>
+            </div>
+            <div id="arrow-right" class="arrow"></div>
+        </div>
+        <div class="options-login oa">
+            <a href="#" class="p border-r" id="create-account">Crear Cuenta</a>
+            <a href="#" class="p index-dash">Iniciar Sesión</a>
+        </div>
+    </main>
+    <div id="dash-shops" style="display: none;">
+        <header class="header header-shop">
+            <button id="butHomeShop" class="headerButton float-left" aria-label=""></button>
+            <button id="butListShops" class="headerButton float-right" aria-label=""></button>
+        </header>
+        <main class="main-shop" id="map">
+        </main>
+        <div class="dialog-container">
+            <div class="dialog">
+                <div class="dialog-title">TIENDAS DIONE</div>
+                <div class="dialog-body">
+                    <div class="list-shop cardShop" hidden></div>
+                </div>
+                <div class="dialog-buttons">
+                    <button id="butShowAll" class="button">Ver todos</button>
+                    <button id="butAddCancel" class="button">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXLhcSlMm4GJzLpQtJ9AAbi8R-v08Tgug" asyn defer></script>
+    <script src="scripts/shops.js"></script>
+</body>
+</html>

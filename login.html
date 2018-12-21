@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="styles/dione.css">
     <link rel="stylesheet" href="styles/forms.css">
     <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/dialog.css">
+    <link rel="stylesheet" href="styles/shops.css">
+    <link rel="stylesheet" href="styles/dash-not-login.css">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="manifest" href="/manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,10 +22,56 @@
     <meta name="msapplication-TileColor" content="#2F3BA2">
 </head>
 <body>
-    <div class="bg-session" hidden>
+    <main id="dash-panel" class="container-dash">
         <header class="">
             <div class="login-log"></div>
-            <button id="butStoresLogin" class="headerButton float-right" aria-label=""></button>
+            <button id="butShops" class="headerButton float-right butShopsPanel" aria-label=""></button>
+        </header>
+        <div class="wrap">
+            <div id="arrow-left" class="arrow"></div>
+            <div id="slider">
+                <div class="slide slideTemplate" hidden>
+                    <div class="slide-content">
+                        <div class="pointers p-not-dash">
+                        </div>
+                        <div class="text-slider-dash">
+                            <strong class="text-center title-slider-d">30% OFF</strong><br>
+                            <small class="text-center subtitle-slider-d">BOLSO BASIC CON 30% DE DESCUENTO!</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="arrow-right" class="arrow"></div>
+        </div>
+        <div class="options-login oa">
+            <a href="#" class="p border-r create-account">Crear Cuenta</a>
+            <a href="#" class="p login-view">Iniciar Sesión</a>
+        </div>
+    </main>
+    <div id="dash-shops" style="display: none;">
+        <header class="header header-shop">
+            <button id="butHomeShop" class="headerButton float-left" aria-label=""></button>
+            <button id="butListShops" class="headerButton float-right" aria-label=""></button>
+        </header>
+        <main class="main-shop" id="map">
+        </main>
+        <div class="dialog-container">
+            <div class="dialog">
+                <div class="dialog-title">TIENDAS DIONE</div>
+                <div class="dialog-body">
+                    <div class="list-shop cardShop" hidden></div>
+                </div>
+                <div class="dialog-buttons">
+                    <button id="butShowAll" class="button">Ver todos</button>
+                    <button id="butAddCancel" class="button">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-session" id="lLogin" style="display: none;">
+        <header class="">
+            <div class="login-log"></div>
+            <button id="butShopsL" class="headerButton float-right butShopsPanel" aria-label=""></button>
         </header>
         <div class="session sessionStart">
             <form name="frmSession" class="formDataDione" id="frmSession">
@@ -34,15 +84,14 @@
                     <input type="password" class="form-control" name="txtPassword" id="txtPassword" placeholder="Ingresa tu contraseña" value="Dione">
                 </div>
                 <p class="text-center ptop2"><button type="submit" id="submitLogin" class="btn btn-black">Iniciar sesión</button></p>
-                <!--<p class="text-center"><a href="register.html">REGISTRATE</a></p>-->
             </form>
         </div>
         <div class="options-login oa">
-            <a href="#" class="p border-r">Crear Cuenta</a>
-            <a href="#" class="p">Inicio</a>
+            <a href="#" class="p border-r create-account">Crear Cuenta</a>
+            <a href="#" class="p index-dash">Inicio</a>
         </div>
     </div>
-    <div class="bg-register" hidden>
+    <div class="bg-register" id="lRegister" style="display: none;">
         <header class="">
             <div class="login-log"></div>
         </header>
@@ -76,15 +125,15 @@
                     <label for="txtNTargetR">Tarjeta Dione</label>
                     <input type="text" class="form-control" name="txtNTargetR" id="txtNTargetR" placeholder="812931092">
                 </div>
-                <p class="text-center"><button type="submit" id="submitLoginR" class="btn btn-black">Aceptar</button></p>
+                <p class="text-center"><button type="submit" id="submitCreate" class="btn btn-black">Aceptar</button></p>
             </form>
             <div class="options-login ob">
-                <a href="#" class="p border-r">Login</a>
-                <a href="#" class="p">Inicio</a>
+                <a href="#" class="p border-r login-view">Login</a>
+                <a href="#" class="p index-dash">Inicio</a>
             </div>
         </div>
     </div>
-    <div class="bg-confirm">
+    <div class="bg-confirm" id="lConfirm" style="display: none;">
         <header class="">
             <div class="login-log"></div>
         </header>
@@ -99,15 +148,18 @@
             <span>Tarjeta Mundo Dione:</span><br>
             <span>812931092</span><br>
             <p><input type="checkbox" name="" id="">Acepto términos y condiciones y Politica de Privacidad. Conoce nuestro AVISO DE PRIVACIDAD</p>
-            <p class="text-center"><button type="submit" id="submitLoginR" class="btn btn-black">Crear Cuenta</button></p>
+            <p class="text-center"><button type="submit" id="submitConfirm" class="btn btn-black">Crear Cuenta</button></p>
+        </div>
+        <div class="options-login oa">
+            <a href="#" class="p border-r login-view">Login</a>
+            <a href="#" class="p index-dash">Inicio</a>
         </div>
     </div>
-    <div class="options-login oa">
-            <a href="#" class="p border-r">Login</a>
-            <a href="#" class="p">Inicio</a>
-        </div>
     <script src="scripts/cookies.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/login.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXLhcSlMm4GJzLpQtJ9AAbi8R-v08Tgug" asyn defer></script>
+    <script src="scripts/shops.js"></script>
+    <script src="scripts/dash-not-login.js"></script>
 </body>
 </html>

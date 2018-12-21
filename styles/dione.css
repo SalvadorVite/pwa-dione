@@ -2,13 +2,18 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Montserrat";
+    src: url("../styles/fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
 html, body {
     background: #FFF;
     padding: 0;
     margin: 0;
     height: 100%;
     width: 100%;
-    font-family: 'Helvetica', 'Verdana', sans-serif;
+    font-family: 'Montserrat', 'Helvetica', sans-serif !important;
     font-weight: 400;
     font-display: optional;
     color: #000;
@@ -88,6 +93,12 @@ body {
     z-index: 1000; 
 }
 
+#dash-panel header {
+    z-index: 1000 !important;
+    background: rgba(255, 255, 255, 0) !important;
+    box-shadow: none !important;
+}
+
 .header__title {
     font-weight: 400;
     font-size: 20px;
@@ -110,6 +121,67 @@ body {
     border: none;
     outline: none;
     cursor: pointer; 
+}
+
+#butShops {
+    background: url('../images/svg/maps-icon.svg') center center no-repeat; 
+}
+
+.login-log {
+    margin-left: 16px;
+    background: url("../images/logo1-sm.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:absolute;
+	max-width:100%;
+	max-height:100%;
+    overflow:auto;
+    /*Rplace for breakppoints*/
+    width: 104px;
+    height: 40px;
+    left:0; right:0;
+    top:1rem; bottom:0;
+}
+
+.pointers {
+    width: 100%;
+    max-height: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* top: 0; */
+    bottom: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.p-not-dash {
+    bottom: 35% !important;
+}
+
+.text-slider-dash {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* top: 0; */
+    bottom: 28%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    text-align: center;
 }
 
 .dot {
@@ -137,6 +209,7 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    color: #fff !important;
 }
 
 .img-responsive {
@@ -149,8 +222,8 @@ body {
 
 .card-info {
     position: absolute;
-    background: rgba(255, 255, 255, 0.70);
-    height: 15rem;
+    background: rgba(0, 0, 0, 0.5);
+    height: 12rem;
     width: 100%;
     bottom: 0px;
 }
@@ -178,6 +251,15 @@ body {
     max-width: 40px;
 }
 
+.icons > img {
+    max-width: 40px;
+    float: right;
+}
+
+.left-profile {
+    float: left !important;
+}
+
 img.nots {
     padding-top: 5px;
 }
@@ -188,16 +270,23 @@ img.nots {
 
 .card-profile {
     position: absolute;
-    height: 3.5rem;
+    height: 4rem;
     width: 100%;
-    top: 3rem;
+    top: 0rem;
 }
 
 .card-shop {
     position: absolute;
-    height: 3.6rem;
+    height: 4rem;
     width: 100%;
-    top: 6.5rem;
+    top: 4rem;
+}
+
+.card-progress {
+    position: absolute;
+    height: 4rem;
+    width: 100%;
+    top: 8rem;
 }
 
 .card-records {
@@ -208,12 +297,30 @@ img.nots {
 }
 
 .progress-dione {
+    top: 50%;
     position: absolute;
-    margin: 0px 10px;
-    width: 100%;
-    bottom: 0.2rem;
+    margin: 0px 1%;
+    width: 97%;
+    height: 0.5rem !important;
 }
 
+.progress-text-data {
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    margin: 0px 1%;
+    width: 97%;
+    height: 0.5rem !important;
+}
+
+.progress-text-span {
+    top: 60%;
+    text-align: center;
+    margin: 0px 1%;
+    position: absolute;
+    width: 97%;
+    height: 0.8rem !important;
+}
 .card-profile p, .card-shop p, .card-records p {
     margin-top: 15px;
     padding: 0 !important;

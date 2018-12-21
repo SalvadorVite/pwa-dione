@@ -1,0 +1,75 @@
+.container-dash {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.container-dash header {
+    z-index: 1000;
+    width: 100%;
+    height: 56px;
+    background: rgba(255, 255, 255, 0) !important;
+    position: fixed;
+    padding: 16px 16px 0 16px;
+    display: inline-block;
+}
+
+header .butShopsPanel {
+    width: 24px;
+    height: 24px;
+    /*margin-right: 16px;*/
+    text-indent: -30000px;
+    overflow: hidden;
+    opacity: 0.54;
+    -webkit-transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
+    transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
+    border: none;
+    outline: none;
+    cursor: pointer; 
+    background: url('../images/svg/maps-icon.svg') center center no-repeat; 
+}
+
+.login-log {
+    margin-left: 16px;
+    background: url("../images/logo1-sm.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:absolute;
+	max-width:100%;
+	max-height:100%;
+    overflow:auto;
+    /*Rplace for breakppoints*/
+    width: 104px;
+    height: 40px;
+    left:0; right:0;
+    top:1rem; bottom:0;
+}
+
+.p-not-dash {
+    bottom: 25% !important;
+    margin-bottom: 8px;
+}
+
+.text-slider-dash {
+    width: 100%;
+    max-height: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* top: 0; */
+    bottom: 19%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    text-align: center;
+}

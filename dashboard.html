@@ -35,50 +35,72 @@ Convert file to php and check if the cookie to logged is active
 <body>
     <input type="hidden" id="id_app_us">
     <main id="dash-panel" class="container-promotions">
+        <header class="header">
+            <div class="login-log"></div>
+            <button id="butShops" class="headerButton float-right" aria-label=""></button>
+        </header>
         <div class="wrap">
             <div id="arrow-left" class="arrow"></div>
             <div id="slider">
                 <div class="slide slideTemplate" hidden>
-                    <div class="slide-content"></div>
+                    <div class="slide-content">
+                        <div class="pointers p-not-dash">
+                        </div>
+                        <div class="row text-slider-dash">
+                            <div class="col-2"></div>
+                            <div class="col-8">
+                                <strong class="text-center title-slider-d">30% OFF</strong><br>
+                                <small class="text-center"><marquee class="subtitle-slider-d" behavior="" direction="">BOLSO BASIC CON 30% DE DESCUENTO!</marquee></small>
+                            </div>
+                            <div class="col-2 icons"><img id="butNotifications" class="nots" src="images/svg/Notificacionldpi.svg" alt=""></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="arrow-right" class="arrow"></div>
         </div>
         <div class="card-info">
-            <div class="row card-promotions">
+            <div class="row card-promotions" style="display: none;">
                 <div class="col-2"></div>
                 <div class="col-8 text-promo">
                     <p class="text-center"><span class="title-promo">18 meses sin intereses</span></p>
                     <p class="text-center"><marquee behavior="" direction="" class="sub-promo">Aprovecha los mejores descuentos de navidad.</marquee></p>
                 </div>
-                <div class="col-2 icons"><img id="butNotifications" class="nots" src="images/dash/notificaciones.png" alt=""></div>
+                <div class="col-2 icons"><img id="butNotifications1" class="nots" src="images/svg/Notificacionldpi.svg" alt=""></div>
             </div>
             <div class="row card-profile">
                 <div class="col-5">
-                    <img src="images/dash/nivel.png" class="image-level" alt="">
+                    <p class=""><strong class="user-name">ISELIN</strong><br><strong class="sur-name">PEREZ</strong></p>
                 </div>
                 <div class="col-5">
-                    <p class="text-center"><strong class="user-name">MARIA PEREZ</strong><br><strong class="dione-level">ORO</strong></p>
-                    <p class="text-center dione-points">2500 puntos.</p>
+                    <img src="images/dash/nivel.png" class="image-level" alt="">
                 </div>
-                <div class="col-2 icons"><img id="butProfile" class="dash-icons" src="images/dash/perfil.png" alt=""></div>
+                <div class="col-2 icons"><img id="" class="dash-icons" src="images/dash/compras.png" alt=""></div>
             </div>
             <div class="row card-shop">
+                <div class="col-5 icons"><img id="butProfile" class="dash-icons left-profile" src="images/dash/perfil.png" alt=""></div>
                 <div class="col-5"></div>
-                <div class="col-5"></div>
-                <div class="col-2 icons"><img id="butShops" class="dash-icons" src="images/dash/compras.png" alt=""></div>
+                <div class="col-2 icons"><img id="butRecords" class="dash-icons" src="images/dash/historial.png" alt=""></div>
             </div>
-            <div class="row card-records">
+            <div class="card-progress">
+                <div class="progress-text-data">
+                    <span class="dione-points" style="float: left;">2500 puntos.</span>
+                    <strong class="dione-level" style="float: center;">ORO</strong>
+                    <span class="dione-nextlevel" style="float: right;">PLATINO</span>
+                </div>
+                <div class="progress progress-dione">
+                    <div id="progress-level" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress-text-span">
+                    <span class="text-progress" style="margin-left: 35% !important;"></span>
+                </div>
+            </div>
+            <div class="row card-records" style="display: none;">
                 <div class="col-2"></div>
                 <div class="col-8">
                     <!--<p class="text-center"><span>Estas a 2 pares del platino.</span></p>-->
                 </div>
-                <div class="col-2 icons"><img id="butRecords" class="dash-icons" src="images/dash/historial.png" alt=""></div>
-            </div>
-            <div class="progress progress-dione">
-                <div id="progress-level" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">
-                    <span class="text-progress"></span>
-                </div>
+                <div class="col-2 icons"></div>
             </div>
         </div>
     </main>

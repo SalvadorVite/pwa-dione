@@ -1,6 +1,14 @@
 (function() {
     var login = {
-        dataUserDione: []
+        dataUserDione: [],
+        panelLogin: document.querySelector('#lLogin'),
+        panelRegister: document.querySelector('#lRegister'),
+        panelConfirm: document.querySelector('#lConfirm'),
+        panelDash: document.querySelector('#dash-panel'),
+        panelMap: document.querySelector('#dash-shops'),
+        btnIndex: document.querySelectorAll('.index-dash'),
+        btnLogin: document.querySelectorAll('.login-view'),
+        btnNewAccount: document.querySelectorAll('.create-account')
     };
 
     //Add event listeners for UI Elements
@@ -8,6 +16,44 @@
         e.preventDefault();
         login.getData();
     });
+
+    document.getElementById('submitCreate').addEventListener('click', function(e) {
+        e.preventDefault();
+        //Add code here for register account
+        login.panelConfirm.style.display = 'block';
+        login.panelRegister.style.display = 'none';
+    });
+
+    document.getElementById('submitConfirm').addEventListener('click', function(e) {
+        e.preventDefault();
+        //Add code here register user
+    });
+
+    for (let i = 0; i < login.btnNewAccount.length; i++) {
+        login.btnNewAccount[i].addEventListener('click', function() {
+            login.panelRegister.style.display = 'block';
+            login.panelDash.style.display = 'none';
+            login.panelLogin.style.display = 'none';
+        });
+    }
+
+    for (let i = 0; i < login.btnLogin.length; i++) {
+        login.btnLogin[i].addEventListener('click', function() {
+            login.panelLogin.style.display = 'block';
+            login.panelDash.style.display = 'none';
+            login.panelRegister.style.display = 'none';
+            login.panelConfirm.style.display = 'none';
+        });
+    }
+
+    for (let i = 0; i < login.btnIndex.length; i++) {
+        login.btnIndex[i].addEventListener('click', function() {
+            login.panelDash.style.display = 'block';
+            login.panelLogin.style.display = 'none';
+            login.panelRegister.style.display = 'none';
+            login.panelConfirm.style.display = 'none';
+        });
+    }
 
     login.getData = function() {
         var mail = document.getElementById('txtEmail').value.trim();

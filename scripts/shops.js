@@ -3,10 +3,13 @@
         dataShops: [],
         dashShops: document.querySelector('#dash-shops'),
         dashPanel: document.querySelector('#dash-panel'),
+        panelLogin: document.querySelector('#lLogin'),
         addDialog: document.querySelector('.dialog-container'),
         cardShop: document.querySelector('.cardShop'),
         listContainer: document.querySelector('.dialog-body'),
-        cardsShops: document.getElementsByClassName('item-shop')
+        cardsShops: document.getElementsByClassName('item-shop'),
+        butDashShops: document.querySelector('#butShops'),
+        butDashShopsL: document.querySelector('#butShopsL')
     };
 
     //Event listeners for UI elements ViewDetail
@@ -15,11 +18,24 @@
         shops.dashShops.style.display = 'none';
     });
 
-    document.getElementById('butShops').addEventListener('click', function() {
-        shops.showMap();
-        shops.dashShops.style.display = 'block';
-        shops.dashPanel.style.display = 'none';
-    });
+    if(shops.butDashShops) {
+        document.getElementById('butShops').addEventListener('click', function() {
+            shops.showMap();
+            shops.dashShops.style.display = 'block';
+            shops.dashPanel.style.display = 'none';
+        });
+        /*document.addEventListener('DOMContentLoaded', function(e) {
+            
+        });*/
+    }
+
+    if(shops.butDashShopsL) {
+        document.getElementById('butShopsL').addEventListener('click', function() {
+            shops.showMap();
+            shops.dashShops.style.display = 'block';
+            shops.panelLogin.style.display = 'none';
+        });
+    }
 
     document.getElementById('butListShops').addEventListener('click', function() {
         shops.toggleAddDialog(true);

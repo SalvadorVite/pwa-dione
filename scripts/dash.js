@@ -58,11 +58,22 @@
         for (let i = 0; i < data.length; i++) {
             var image = data[i].banner;
             var sliderImg = dash.sliderTemplate.cloneNode(true);
+            var title = sliderImg.querySelector('.title-slider-d');
+            var subtitle = sliderImg.querySelector('.subtitle-slider-d');
+            var divpointers = sliderImg.querySelector('.pointers');
+            for (let j = 0; j < data.length; j++) {
+                var spanClass = (j === i) ? 'dot dot-black' : 'dot dot-gray';
+                var span = document.createElement('span');
+                span.className = spanClass;
+                divpointers.appendChild(span);
+            }
             sliderImg.classList.remove('slideTemplate');
             sliderImg.classList.add('cardSlide');
             sliderImg.removeAttribute('hidden');
             sliderImg.setAttribute('data-event', data[i].id_evento);
             sliderImg.style.backgroundImage = 'url('+image+')';
+            title.textContent = data[i].nombre;
+            subtitle.textContent = data[i].cuerpo;
             dash.container.appendChild(sliderImg);
         }
         slider.startSlide();
@@ -117,11 +128,13 @@
         dash.dataUser = localStorage.dataUserDione;
         var dataUser = JSON.parse(dash.dataUser);
         var userName = document.querySelector('.user-name');
+        var surName = document.querySelector('.sur-name');
         var dioneLevel = document.querySelector('.dione-level');
         var dionePoints = document.querySelector('.dione-points');
         var progress = document.querySelector('#progress-level');
         var textPro = document.querySelector('.text-progress');
-        userName.textContent = dataUser[0].nombres + ' ' + dataUser[0].ape_materno;
+        userName.textContent = dataUser[0].nombres;
+        surName.textContent = dataUser[0].ape_materno;
         var levelDione = (dataUser[0].puntos !== null) ? dash.getLevelDione(dataUser[0].puntos) : dash.getLevelDione(0);
         dioneLevel.textContent = levelDione.levelText;
         dioneLevel.classList.add(levelDione.levelClass);
@@ -129,23 +142,23 @@
         progress.style.width = levelDione.percentajecompleted + '%';
         progress.setAttribute('aria-valuenow', levelDione.percentajecompleted);
         textPro.textContent = levelDione.percentajecompleted + '%';
-        dionePoints.textContent = (dataUser[0].puntos_disponibles !== null) ? dataUser[0].puntos_disponibles : 0;
+        dionePoints.textContent = (dataUser[0].puntos_disponibles !== null) ? dataUser[0].puntos_disponibles + ' puntos' : 0 + ' puntos';
         document.getElementById('id_app_us').value = dataUser[0].id_cliente;
     };
 
     dash.getLevelDione = function(p) {
-        var level = {levelText: 'Plata', levelClass: 'silver', percentajecompleted: 0, percentajeMissing: 100, progressClass: "bg-silver"};
+        var level = {levelText: 'PLATA', levelClass: 'silver', percentajecompleted: 0, percentajeMissing: 100, progressClass: "bg-silver"};
         if (p >= 0 && p < 12000) {
             var pc = Math.floor((parseInt(p) * 100) / 12000);
             var pm = 100 - pc;
-            level = {levelText: 'Plata', levelClass: 'silver', percentajecompleted: pc, percentajeMissing: pm, progressClass: "bg-silver"};
+            level = {levelText: 'PLATA', levelClass: 'silver', percentajecompleted: pc, percentajeMissing: pm, progressClass: "bg-silver"};
         } else if(p >= 12000 && p < 25000) {
             var pc = parseInt(p) - 12000;
             pc = Math.floor((pc * 100) / 13000);
             var pm = 100 - pc;
-            level = {levelText: 'Oro', levelClass: 'gold', percentajecompleted: pc, percentajeMissing: pm, progressClass: "bg-gold"};
+            level = {levelText: 'ORO', levelClass: 'gold', percentajecompleted: pc, percentajeMissing: pm, progressClass: "bg-gold"};
         } else if(p >= 25000) {
-            level = {levelText: 'Platino', levelClass: 'platinum', percentajecompleted: 100, percentajeMissing: 0, progressClass: "bg-platinum"};
+            level = {levelText: 'PLATINO', levelClass: 'platinum', percentajecompleted: 100, percentajeMissing: 0, progressClass: "bg-platinum"};
         }
         return level;
     };

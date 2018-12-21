@@ -131,34 +131,39 @@
         var surName = document.querySelector('.sur-name');
         var dioneLevel = document.querySelector('.dione-level');
         var dionePoints = document.querySelector('.dione-points');
+        var dioneNextLevel = document.querySelector('.dione-nextlevel');
         var progress = document.querySelector('#progress-level');
         var textPro = document.querySelector('.text-progress');
         userName.textContent = dataUser[0].nombres;
         surName.textContent = dataUser[0].ape_materno;
         var levelDione = (dataUser[0].puntos !== null) ? dash.getLevelDione(dataUser[0].puntos) : dash.getLevelDione(0);
         dioneLevel.textContent = levelDione.levelText;
+        dioneNextLevel.textContent = levelDione.levelNextText;
         dioneLevel.classList.add(levelDione.levelClass);
         progress.classList.add(levelDione.progressClass);
         progress.style.width = levelDione.percentajecompleted + '%';
         progress.setAttribute('aria-valuenow', levelDione.percentajecompleted);
+        var perProgress = (levelDione.percentajecompleted > 5) ? levelDione.percentajecompleted - 5 : levelDione.percentajecompleted;
+        perProgress = perProgress + '%';
+        textPro.style.marginLeft = perProgress;
         textPro.textContent = levelDione.percentajecompleted + '%';
         dionePoints.textContent = (dataUser[0].puntos_disponibles !== null) ? dataUser[0].puntos_disponibles + ' puntos' : 0 + ' puntos';
         document.getElementById('id_app_us').value = dataUser[0].id_cliente;
     };
 
     dash.getLevelDione = function(p) {
-        var level = {levelText: 'PLATA', levelClass: 'silver', percentajecompleted: 0, percentajeMissing: 100, progressClass: "bg-silver"};
+        var level = {levelText: 'PLATA', levelNextText: 'ORO', levelClass: 'silver', percentajecompleted: 0, percentajeMissing: 100, progressClass: "bg-silver"};
         if (p >= 0 && p < 12000) {
             var pc = Math.floor((parseInt(p) * 100) / 12000);
             var pm = 100 - pc;
-            level = {levelText: 'PLATA', levelClass: 'silver', percentajecompleted: pc, percentajeMissing: pm, progressClass: "bg-silver"};
+            level = {levelText: 'PLATA', levelNextText: 'ORO',levelClass: 'silver', percentajecompleted: pc, percentajeMissing: pm, progressClass: "bg-silver"};
         } else if(p >= 12000 && p < 25000) {
             var pc = parseInt(p) - 12000;
             pc = Math.floor((pc * 100) / 13000);
             var pm = 100 - pc;
-            level = {levelText: 'ORO', levelClass: 'gold', percentajecompleted: pc, percentajeMissing: pm, progressClass: "bg-gold"};
+            level = {levelText: 'ORO', levelNextText: 'PLATINO', levelClass: 'gold', percentajecompleted: pc, percentajeMissing: pm, progressClass: "bg-gold"};
         } else if(p >= 25000) {
-            level = {levelText: 'PLATINO', levelClass: 'platinum', percentajecompleted: 100, percentajeMissing: 0, progressClass: "bg-platinum"};
+            level = {levelText: 'PLATINO', levelNextText: 'PLATINO',levelClass: 'platinum', percentajecompleted: 100, percentajeMissing: 0, progressClass: "bg-platinum"};
         }
         return level;
     };
@@ -267,7 +272,7 @@
         sliderTemplate: document.querySelector('.slideTemplateDetail'),
         infoPromotion: [],
         titlePromotion: document.querySelector('.title-promo-detail'),
-        hashtag: document.querySelector('.hashtag')
+        titleHashtag: document.querySelector('.title-promo-det')
     };
 
     //Event listeners for UI elements ViewDetail
@@ -296,6 +301,7 @@
         sliderImg.setAttribute('data-event', data[0].id_evento);
         sliderImg.style.backgroundImage = 'url('+image+')';
         viewDetail.container.appendChild(sliderImg);
+        viewDetail.titleHashtag.textContent = data[0].nombre;
         viewDetail.titlePromotion.textContent = data[0].encabezado;
     };
 

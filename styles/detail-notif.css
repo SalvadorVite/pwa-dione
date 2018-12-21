@@ -1,15 +1,15 @@
 /*Styles for DetailNotifications*/
 .card-info-promo {
     position: absolute;
-    height: 8rem;
+    height: 10rem;
     width: 100%;
-    bottom: 8rem;
+    bottom: 10rem;
+    color: #fff;
+    padding-top: 1rem;
 }
 
-.card-info-detail {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.70);
-    height: 100%;
+.tinto {
+    background-color: rgb(144, 0, 0, 0.50);
 }
 
 .head-trans {

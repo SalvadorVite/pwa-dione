@@ -8,6 +8,7 @@
         infoNotifs: [],
         cardNotifTemplate: document.querySelector('.card-notif-template'),
         container: document.querySelector('.main-list')
+        //notifs: document.querySelector('.nots')
     };
 
     //Event listeners for UI elements ViewDetail
@@ -16,6 +17,15 @@
         listNotif.dashPanel.style.display = 'none';
         listNotif.hideCardsNotif();
     });
+
+    /*for (let i = 0; i < listNotif.notifs.length; i++) {
+        console.log(listNotif.notifs)
+        listNotif.notifs[i].addEventListener('click', function() {
+            listNotif.dashListNotif.style.display = 'block';
+            listNotif.dashPanel.style.display = 'none';
+            listNotif.hideCardsNotif();
+        });
+    }*/
 
     document.getElementById('butListPromotions').addEventListener('click', function() {
         listNotif.dashListNotif.style.display = 'block';

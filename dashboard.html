@@ -52,7 +52,7 @@ Convert file to php and check if the cookie to logged is active
                                 <strong class="text-center title-slider-d">30% OFF</strong><br>
                                 <small class="text-center"><marquee class="subtitle-slider-d" behavior="" direction="">BOLSO BASIC CON 30% DE DESCUENTO!</marquee></small>
                             </div>
-                            <div class="col-2 icons"><img id="butNotifications" class="nots" src="images/svg/Notificacionldpi.svg" alt=""></div>
+                            <div class="col-2 icons"><!--<img id="butNotifications" class="nots" src="images/svg/Notificacionldpi.svg" alt="">--></div>
                         </div>
                     </div>
                 </div>
@@ -69,13 +69,13 @@ Convert file to php and check if the cookie to logged is active
                 <div class="col-2 icons"><img id="butNotifications1" class="nots" src="images/svg/Notificacionldpi.svg" alt=""></div>
             </div>
             <div class="row card-profile">
-                <div class="col-5">
+                <div class="col-2">
                     <p class=""><strong class="user-name">ISELIN</strong><br><strong class="sur-name">PEREZ</strong></p>
                 </div>
-                <div class="col-5">
+                <div class="col-8">
                     <img src="images/dash/nivel.png" class="image-level" alt="">
                 </div>
-                <div class="col-2 icons"><img id="" class="dash-icons" src="images/dash/compras.png" alt=""></div>
+                <div class="col-2 icons"><img id="butNotifications" class="nots" src="images/svg/Notificacionldpi.svg" alt=""></div>
             </div>
             <div class="row card-shop">
                 <div class="col-5 icons"><img id="butProfile" class="dash-icons left-profile" src="images/dash/perfil.png" alt=""></div>
@@ -84,15 +84,26 @@ Convert file to php and check if the cookie to logged is active
             </div>
             <div class="card-progress">
                 <div class="progress-text-data">
-                    <span class="dione-points" style="float: left;">2500 puntos.</span>
-                    <strong class="dione-level" style="float: center;">ORO</strong>
-                    <span class="dione-nextlevel" style="float: right;">PLATINO</span>
+                    <span class="dione-points" style="float: left;">0 puntos.</span>
+                    <strong class="dione-level" style="float: center;">PLATA</strong>
+                    <span class="dione-nextlevel" style="float: right;">ORO</span>
                 </div>
+                <!--<div class="row progress-text-data">
+                    <div class="col-4">
+                        <span class="dione-points">0 puntos.</span>
+                    </div>
+                    <div class="col-4">
+                        <strong class="dione-level" style="text-align: center;">PLATA</strong>
+                    </div>
+                    <div class="col-4">
+                        <span class="dione-nextlevel" style="text-align: right;">ORO</span>
+                    </div>
+                </div>-->
                 <div class="progress progress-dione">
-                    <div id="progress-level" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div id="progress-level" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <div class="progress-text-span">
-                    <span class="text-progress" style="margin-left: 35% !important;"></span>
+                    <span class="text-progress" style="font-size: 0.8rem;">1%</span>
                 </div>
             </div>
             <div class="row card-records" style="display: none;">
@@ -117,18 +128,17 @@ Convert file to php and check if the cookie to logged is active
                     </div>
                 </div>
             </div>
-            <div class="row card-info-promo">
-                <div class="col-4"></div>
-                <div class="col-8 card-info-detail">
-                    <h5 class="title-promo-detail">Descuentos de fin de año</h5>
-                    <h6 class="hashtag">#MundoDione</h6>
-                </div>
+            <div class="card-info-promo tinto">
+                <h4 class="title-promo-det text-center"></h4>
+                <h5 class="title-promo-detail text-center">Descuentos de fin de año</h5>
+                <h6 class="hashtag text-center">#MundoDione</h6>
             </div>
         </main>
     </div>
     <div id="dash-list-promos" style="display: none;">
         <header class="header header-list">
             <button id="butHomeList" class="headerButton float-left" aria-label=""></button>
+            <h1 class="header__title float-right txt-tinto">NOTIFICACIONES</h1>
         </header>
         <main class="main-list">
             <div class="card-list-notif card-notif-template" hidden>
@@ -167,7 +177,7 @@ Convert file to php and check if the cookie to logged is active
     <div id="dash-records-user" style="display: none;">
         <header class="header header-record">
             <button id="butBackRecord" class="headerButton float-left" aria-label=""></button>
-            <h1 class="header__title">Historial de Compras</h1>
+            <h1 class="header__title float-right">Historial de Compras</h1>
         </header>
         <main class="main-record">
             <div class="card-record no-records" hidden>
@@ -184,12 +194,14 @@ Convert file to php and check if the cookie to logged is active
     <div id="dash-profile" style="display: none;">
         <header class="header header-profile">
             <button id="butBackProfile" class="headerButton float-left" aria-label=""></button>
-            <h1 class="header__title">Perfil</h1>
+            <h1 class="header__title float-right">Perfil</h1>
         </header>
         <main class="main-profile">
             <h4 class="text-center user-profile">Cliente Dione</h4>
             <p class="text-center">Cliente Dione</p>
-            <a href="#" class="logout" id="logout">Cerrar sesión</a>
+            <div class="cont-logout">
+                <a href="#" class="logout" id="logout">Cerrar sesión</a>
+            </div>
         </main>
     </div>
     <script src="scripts/app.js"></script>

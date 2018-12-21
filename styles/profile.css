@@ -22,6 +22,7 @@
 }
 
 .main-profile {
+    text-align: center;
     padding-top: 60px;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -30,6 +31,12 @@
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; 
+}
+
+.cont-logout {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
 }
 
 .details-profile {
